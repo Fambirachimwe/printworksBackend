@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supplieds",
+  "info": {
+    "name": "supplied",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "job_ids": {
+      "collection": "job",
+      "via": "supplieds",
+      "dominant": true
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

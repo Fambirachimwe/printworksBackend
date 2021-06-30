@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/printing-files",
+      "handler": "printing-files.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/printing-files/count",
+      "handler": "printing-files.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/printing-files/:id",
+      "handler": "printing-files.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/printing-files",
+      "handler": "printing-files.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/printing-files/:id",
+      "handler": "printing-files.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/printing-files/:id",
+      "handler": "printing-files.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

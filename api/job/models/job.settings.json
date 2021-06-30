@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "name": "Job",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "quantity": {
+      "type": "biginteger"
+    },
+    "size": {
+      "type": "text"
+    },
+    "stock": {
+      "type": "text"
+    },
+    "cover_stock": {
+      "type": "string"
+    },
+    "text_stock": {
+      "type": "text"
+    },
+    "printing_files": {
+      "via": "jobId",
+      "collection": "printing-files"
+    },
+    "customer": {
+      "via": "jobs",
+      "model": "customer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "active",
+        "printing",
+        "completed"
+      ],
+      "default": "new"
+    },
+    "artworks": {
+      "via": "job",
+      "collection": "artwork"
+    },
+    "designers": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "job_assigneds",
+      "dominant": true
+    },
+    "hours_spent": {
+      "type": "biginteger"
+    },
+    "supplieds": {
+      "via": "job_ids",
+      "collection": "supplied"
+    }
+  }
+}

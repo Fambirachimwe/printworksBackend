@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "printing_files",
+  "info": {
+    "name": "printing_files"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobId": {
+      "via": "printing_files",
+      "model": "job"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

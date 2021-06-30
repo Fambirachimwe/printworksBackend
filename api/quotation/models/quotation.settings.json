@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotations",
+  "info": {
+    "name": "Quotation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quote_file": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "customer": {
+      "model": "customer",
+      "via": "quotations"
+    }
+  }
+}

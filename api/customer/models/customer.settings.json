@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "string"
+    },
+    "contact_person": {
+      "type": "string"
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "telephone": {
+      "type": "biginteger"
+    },
+    "mobile": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "jobs": {
+      "via": "customer",
+      "collection": "job"
+    },
+    "quotations": {
+      "via": "customer",
+      "collection": "quotation"
+    }
+  }
+}
