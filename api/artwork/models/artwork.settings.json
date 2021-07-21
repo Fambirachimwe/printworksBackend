@@ -12,9 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "job": {
-      "via": "artworks",
-      "model": "job"
+    "job_id": {
+      "model": "job",
+      "via": "artworks"
     },
     "files": {
       "collection": "file",

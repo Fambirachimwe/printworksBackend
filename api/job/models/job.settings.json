@@ -48,10 +48,6 @@
       ],
       "default": "new"
     },
-    "artworks": {
-      "via": "job",
-      "collection": "artwork"
-    },
     "designers": {
       "plugin": "users-permissions",
       "collection": "user",
@@ -61,8 +57,12 @@
     "hours_spent": {
       "type": "biginteger"
     },
+    "artworks": {
+      "via": "job_id",
+      "collection": "artwork"
+    },
     "supplieds": {
-      "via": "job_ids",
+      "via": "job_id",
       "collection": "supplied"
     }
   }

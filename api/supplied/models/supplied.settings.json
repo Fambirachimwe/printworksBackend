@@ -12,10 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "job_ids": {
-      "collection": "job",
-      "via": "supplieds",
-      "dominant": true
+    "job_id": {
+      "model": "job",
+      "via": "supplieds"
     },
     "files": {
       "collection": "file",
