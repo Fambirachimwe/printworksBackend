@@ -30,10 +30,6 @@
     "text_stock": {
       "type": "text"
     },
-    "printing_files": {
-      "via": "jobId",
-      "collection": "printing-files"
-    },
     "customer": {
       "via": "jobs",
       "model": "customer"
@@ -64,6 +60,10 @@
     "supplieds": {
       "via": "job_id",
       "collection": "supplied"
+    },
+    "printing_files": {
+      "via": "job_id",
+      "collection": "printing-files"
     }
   }
 }

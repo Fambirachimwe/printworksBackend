@@ -16,17 +16,8 @@
       "model": "job",
       "via": "supplieds"
     },
-    "files": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "file_url": {
+      "type": "string"
     }
   }
 }

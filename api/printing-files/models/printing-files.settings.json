@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "printing_files",
   "info": {
-    "name": "printing_files"
+    "name": "printing_files",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,21 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "jobId": {
-      "via": "printing_files",
-      "model": "job"
+    "job_id": {
+      "model": "job",
+      "via": "printing_files"
     },
-    "files": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "file_url": {
+      "type": "string"
     }
   }
 }
